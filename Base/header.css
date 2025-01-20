@@ -1,0 +1,163 @@
+/* Estilo do header */
+header {
+    margin: 0 40px 0;  /* Afastando o header da margem do body */
+    background-color: rgb(1, 158, 1);  /* Cor de fundo verde */
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Logo centralizada */
+header .logo img {
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo do botão Insta */
+#Insta {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 75px;
+    background-color: #fff;  /* Fundo branco */
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#Insta i {
+    color: #000;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+#Insta:hover {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+#Insta:hover i {
+    color: #fff;
+}
+
+/* Estilo do botão hamburguer */
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;  /* Risquinhos brancos */
+    border-radius: 5px;
+    margin: 3px 0;
+}
+
+.menu-hamburguer:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do mini-menu, inicialmente oculto */
+.mini-hamburguer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(1, 158, 1);  /* Fundo verde */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Quando o mini-menu tem a classe "ativo", ele aparece */
+.mini-hamburguer.ativo {
+    max-height: 500px;
+}
+
+/* Estilo dos itens do mini-menu */
+.mini-hamburguer li {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px; /* Espaço entre os itens */
+    border-radius: 8px;
+    background-color: rgb(1, 158, 1);
+    transition: background-color 0.3s ease;
+}
+
+/* Remova a margem inferior do último item do menu */
+.mini-hamburguer li:last-child {
+    margin-bottom: 0;
+}
+
+
+.mini-hamburguer li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.mini-hamburguer li a:hover {
+    background-color: #4caf50;
+}
+
+/* Adicionando borda animada embaixo dos links */
+.mini-hamburguer li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.4s ease;
+}
+
+.mini-hamburguer li a:hover::before {
+    width: 100%;
+}
+
+/* Efeito ao passar o mouse sobre os itens */
+.mini-hamburguer li:hover {
+    background-color: #4caf50;
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+    background-color: black;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+}
